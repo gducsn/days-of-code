@@ -1,0 +1,80 @@
+body {
+    height: 100vh;
+    background: linear-gradient(90deg, hsla(10, 82%, 65%, 1) 0%, hsla(290, 79%, 13%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(10, 82%, 65%, 1) 0%, hsla(290, 79%, 13%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(10, 82%, 65%, 1) 0%, hsla(290, 79%, 13%, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+main {
+    border-radius: 35px;
+    width: 50%;
+    height: 50vh;
+    background-color: #EDE9E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+button {
+    display: block;
+    position: relative;
+    bottom: -10vh;
+    margin-top: 0px;
+}
+
+#generateBtn {
+    width: 25%;
+    height: 10%;
+    border-radius: 10px;
+    background-color: white;
+    border: none;
+    box-shadow: -5px 1px 14px -7px rgba(0, 0, 0, 0.22);
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
+
+.textContainer {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.h3Element {
+    max-width: 65%;
+    max-height: 15%;
+    font-size: 18px;
+    display: inline-block;
+
+}
+
+.h2Element {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+.textElement {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
