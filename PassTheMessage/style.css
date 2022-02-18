@@ -1,0 +1,75 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divElement {
+    width: 55%;
+    height: 50%;
+    background-color: white;
+    border-radius: 40px;
+    -webkit-box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.23);
+    box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.23);
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#inputElement {
+    margin-top: 25px;
+    width: 15%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 2px;
+    background: transparent;
+}
+
+#textElement {
+    border-style: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30%;
+    height: 5%;
+    padding: 3px;
+    text-align: center;
+    background: transparent;
+}
+
+#inputElement:active {
+    transform: translateY(2px);
+}
+
+#inputElement:hover {
+    background-color: #B9DCF2;
+    transition: 0.4s;
+}
