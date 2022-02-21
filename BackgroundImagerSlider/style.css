@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: hsla(288, 20%, 75%, 1);
+
+    background: linear-gradient(90deg, hsla(288, 20%, 75%, 1) 0%, hsla(197, 65%, 42%, 1) 100%);
+
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerImg {
+    border: 1px solid white;
+    width: 50%;
+    height: 50%;
+    border-radius: 15px;
+    position: relative;
+}
+
+img {
+    object-fit: fill;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    border-radius: 15px;
+}
+
+#removeBtn {
+    margin: -15px;
+}
+
+#addBtn {
+    margin: -15px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+    color: black;
+}
+
+input:active:nth-child(1) {
+    transform: translateX(-3px);
+}
+
+input:active:nth-child(2) {
+    transform: translateX(3px);
+}
+
+.btnClass {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
