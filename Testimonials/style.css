@@ -1,0 +1,152 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+    background: hsla(355, 74%, 62%, 1);
+    background: linear-gradient(90deg, hsla(355, 74%, 62%, 1) 0%, hsla(0, 0%, 3%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(355, 74%, 62%, 1) 0%, hsla(0, 0%, 3%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(355, 74%, 62%, 1) 0%, hsla(0, 0%, 3%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#E65763", endColorstr="#080808", GradientType=1);
+}
+
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textEsterno {
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+
+    text-transform: uppercase;
+
+}
+
+.testimonials {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+h3 {
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+.container {
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    height: 100%;
+    position: relative;
+
+}
+
+img {
+    max-width: 100px;
+    border-radius: 100%;
+    border: 1.3px solid black;
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+
+}
+
+.imgInside {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: -10%;
+}
+
+.nameText {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.h3Element {
+
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 20px;
+
+}
+
+.h4Element {
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.btnAction {
+    width: 50%;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+
+}
+
+.removeBtn {
+    margin: -15px;
+}
+
+.addBtn {
+    margin: -15px;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    opacity: 0.9;
+    color: black;
+    border: 1px solid black;
+}
+
+input:active:nth-child(1) {
+    transform: translateX(-3px);
+}
+
+input:active:nth-child(2) {
+    transform: translateX(3px);
+}
