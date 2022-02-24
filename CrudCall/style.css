@@ -1,0 +1,32 @@
+main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.table {
+    max-width: 50%;
+
+}
+
+.table button {
+    padding: 10px;
+    margin-left: 40%;
+}
+
+.btnAction {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+
+}
+
+.btnAction input {
+    margin: 5px;
+}
