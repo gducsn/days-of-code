@@ -128,10 +128,67 @@ btnID.addEventListener('click', (x) => {
 }, false)
 
 upSort.addEventListener('click', x => {
-    let age = document.getElementsByClassName("age");
-    let values = Object.values(age);
-    let number = [Number(values.textContent)]
-    number.sort((a, b) => a - b)
-    console.log(number)
+    tbody.innerHTML = "";
+    let data = Object.values(response.data)
+    let array = [];
+    data.forEach(y => {
+        array.push(y)
+    })
+    array.sort((a, b) => a.age - b.age)
+    array.forEach(x => {
 
+        let tRow2 = document.createElement("tr");
+        tRow2.innerHTML =
+            `<td class="id">${x.id}</td>
+        <td class="name">${x.name}</td>
+        <td class="city">${x.location.city}</td>
+        <td class="age">${x.age}</td>`;
+        tbody.append(tRow2)
+    })
+
+}, false)
+
+downSort.addEventListener('click', x => {
+    let data = Object.values(response.data)
+    tbody.innerHTML = "";
+    let array = [];
+    data.forEach(y => {
+        array.push(y)
+    })
+    array.sort((a, b) => a.age + b.age)
+    array.forEach(x => {
+        let tRow2 = document.createElement("tr");
+        tRow2.innerHTML =
+            `<td class="id">${x.id}</td>
+        <td class="name">${x.name}</td>
+        <td class="city">${x.location.city}</td>
+        <td class="age">${x.age}</td>`;
+        tbody.append(tRow2)
+    })
+
+}, false)
+
+
+function resetAll() {
+    let valueId = filterID.value;
+    let valueCity = filterCity.value;
+    if (valueId == "" || valueCity == "") {
+        tbody.innerHTML = "";
+        populateTable()
+    }
+
+}
+
+filterCity.addEventListener('keyup', x => {
+    let value = x.target.value;
+    if (value.length == 0) {
+        resetAll()
+    }
+})
+
+filterID.addEventListener('keyup', x => {
+    let value = x.target.value;
+    if (value.length == 0) {
+        resetAll()
+    }
 })
