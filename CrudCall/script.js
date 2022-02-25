@@ -2,7 +2,10 @@ const tbody = document.querySelector("tbody");
 const filterID = document.getElementById("filterID");
 const filterCity = document.getElementById("filterCity");
 const btnID = document.getElementById("btnID");
-const btnCity = document.querySelector("#btnCity")
+const btnCity = document.getElementById("btnCity");
+const upSort = document.getElementById("upSort");
+const downSort = document.getElementById("downSort");
+const btnReset = document.getElementById("btnReset");
 
 
 const response = {
@@ -81,63 +84,114 @@ const response = {
 };
 
 let data = Object.values(response.data)
+let array = [];
+
+
 
 
 function addElements() {
-
     data.forEach(x => {
         let tRow = document.createElement("tr");
         tRow.innerHTML =
-            `
-            <td>${x.id}</td>
+            `<td>${x.id}</td>
             <td>${x.name}</td>
             <td>${x.location.city}</td>
             <td>${x.age}</td>`;
         tbody.append(tRow)
-
-        btnCity.addEventListener('click', (e) => {
-
-            e.stopPropagation();
-            e.preventDefault();
-            let value = filterCity.value;
-            if (value !== x.location.city) {
-                tRow.innerHTML = "";
-            }
-            if (value == "") {
-                tRow.innerHTML =
-                    `
-                <td>${x.id}</td>
-                <td>${x.name}</td>
-                <td>${x.location.city}</td>
-                <td>${x.age}</td>`;
-
-            }
-
-        })
-
-        btnID.addEventListener('click', (event) => {
-            event.stopPropagation();
-            event.preventDefault();
+        let idFunction = function () {
             let value = filterID.value;
             if (value != x.id) {
                 tRow.innerHTML = "";
             }
             if (value == "") {
                 tRow.innerHTML =
-                    `
-                <td>${x.id}</td>
-                <td>${x.name}</td>
-                <td>${x.location.city}</td>
-                <td>${x.age}</td>`;
+                    `<td>${x.id}</td>
+            <td>${x.name}</td>
+            <td>${x.location.city}</td>
+            <td>${x.age}</td>`;
+            }
+        }
+        btnID.addEventListener('click', idFunction, false)
 
+        let cityFunction = function () {
+            let value = filterCity.value;
+            if (value != x.location.city) {
+                tRow.innerHTML = "";
             }
 
-        })
+        }
+        btnCity.addEventListener('click', cityFunction, false)
 
-
-    });
-
+        let resetFunction = function () {
+            filterCity.value = "";
+            filterID.value = "";
+            tRow.innerHTML =
+                `<td>${x.id}</td>
+            <td>${x.name}</td>
+            <td>${x.location.city}</td>
+            <td>${x.age}</td>`
+        }
+        btnReset.addEventListener('click', resetFunction, false)
+    })
 
 }
-
 addElements()
+
+
+
+
+
+
+
+
+
+
+
+function sortElement() {
+    upSort.addEventListener('click', x => {
+        x.stopPropagation();
+        x.preventDefault();
+        tbody.innerHTML = "";
+        let array = [];
+        data.forEach(y => {
+            array.push(y)
+        })
+        array.sort((a, b) => a.age - b.age)
+        array.forEach(x => {
+
+            let tRow2 = document.createElement("tr");
+            tRow2.innerHTML =
+                `
+            <td>${x.id}</td>
+            <td>${x.name}</td>
+            <td>${x.location.city}</td>
+            <td>${x.age}</td>`;
+            tbody.append(tRow2)
+        })
+
+    })
+    downSort.addEventListener('click', x => {
+        x.stopPropagation();
+        x.preventDefault();
+        tbody.innerHTML = "";
+        let array = [];
+        data.forEach(y => {
+            array.push(y)
+        })
+        array.sort((a, b) => a.age + b.age)
+        array.forEach(x => {
+
+            let tRow2 = document.createElement("tr");
+            tRow2.innerHTML =
+                `
+            <td>${x.id}</td>
+            <td>${x.name}</td>
+            <td>${x.location.city}</td>
+            <td>${x.age}</td>`;
+            tbody.append(tRow2)
+        })
+
+    })
+}
+
+sortElement();
