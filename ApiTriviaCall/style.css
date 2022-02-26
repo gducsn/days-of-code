@@ -1,0 +1,82 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #4E878C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+main {
+    height: 100vh;
+    width: 90%;
+    position: sticky;
+    background-color: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column;
+}
+
+.headTrivia {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+
+}
+
+.catQuestion {
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.question {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.diffQuestion {
+    text-transform: uppercase;
+    font-size: 8px;
+}
+
+.btn {
+    width: 50%;
+    margin: 20px auto;
+}
+
+
+li {
+    list-style-type: none;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+    width: 80%;
+}
+
+li:nth-child(even) {
+    margin-top: 10px;
+}
+
+li:nth-child(odd) {
+    margin-top: 10px;
+}
+
+
+.bodyTrivia {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li:hover {
+    background-color: #495867;
+    color: white;
+    cursor: pointer;
+}
