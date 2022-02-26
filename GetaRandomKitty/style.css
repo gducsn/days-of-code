@@ -1,0 +1,42 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #373F47;
+
+}
+
+main {
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.imgKitty {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+img {
+    margin-top: 10px;
+    width: 500px;
+    height: 500px;
+
+    object-fit: contain;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}

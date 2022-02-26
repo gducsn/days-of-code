@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://img.icons8.com/fluency/344/pixel-cat.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Get a random Kitty</title>
+</head>
+
+<body>
+    <main>
+        <div class="imgKitty">
+            <img class="kitty" src="https://cdn2.thecatapi.com/images/0y_pb8Sd8.jpg" alt="">
+            <br>
+            <button type="button" class="btn btn-dark">Another Kitty?</button>
+        </div>
+    </main>
+
+</body>
+<script>
+    const button = document.querySelector(".btn")
+    const images = document.querySelector(".kitty")
+
+    async function download() {
+        let data = await fetch("https://api.thecatapi.com/v1/images/search");
+        let json = await data.json();
+        images.src = json[0].url;
+    }
+
+    button.addEventListener('click', download)
+</script>
+
+</html>
