@@ -1,22 +1,25 @@
-body {
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    background-color: #4E878C;
+}
+
+body {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    background: #324376;
+
 }
 
 main {
-    height: 100vh;
-    width: 90%;
-    position: sticky;
+    width: 70%;
+    border-radius: 10px;
     background-color: white;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-flow: column;
+    padding: 20px;
 }
 
 .headTrivia {
@@ -24,8 +27,7 @@ main {
     flex-flow: column wrap;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 20px;
-
+    padding: 0px;
 }
 
 .catQuestion {
@@ -46,6 +48,7 @@ main {
 .btn {
     width: 50%;
     margin: 20px auto;
+    margin-bottom: 10px;
 }
 
 
@@ -67,16 +70,20 @@ li:nth-child(odd) {
 }
 
 
-.bodyTrivia {
-    margin: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 li:hover {
     background-color: #495867;
     color: white;
     cursor: pointer;
+}
+
+.question2 {
+    padding: 50px;
+    align-self: center;
+
+}
+
+.btn2 {
+    align-self: center;
+    width: 100%;
 }
